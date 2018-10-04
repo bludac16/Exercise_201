@@ -1,5 +1,7 @@
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -12,14 +14,16 @@ import java.time.LocalDateTime;
  * @author David
  */
 public class Measurement {
-    private LocalDateTime date;
+    private LocalDate date;
+    private LocalTime time;
     private String plate;
     private int measuredSpeed;
     private int maxSpeed;
     private int lawMisdemeanour;
 
-    public Measurement(LocalDateTime date, String plate, int measuredSpeed, int maxSpeed, int lawMisdemeanour) {
+    public Measurement(LocalDate date, LocalTime time, String plate, int measuredSpeed, int maxSpeed, int lawMisdemeanour) {
         this.date = date;
+        this.time = time;
         this.plate = plate;
         this.measuredSpeed = measuredSpeed;
         this.maxSpeed = maxSpeed;
@@ -29,14 +33,14 @@ public class Measurement {
     /**
      * @return the date
      */
-    public LocalDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
     /**
      * @param date the date to set
      */
-    public void setDate(LocalDateTime date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
@@ -94,6 +98,20 @@ public class Measurement {
      */
     public void setLawMisdemeanour(int lawMisdemeanour) {
         this.lawMisdemeanour = lawMisdemeanour;
+    }
+
+    /**
+     * @return the time
+     */
+    public LocalTime getTime() {
+        return time;
+    }
+
+    /**
+     * @param time the time to set
+     */
+    public void setTime(LocalTime time) {
+        this.time = time;
     }
     
 }
