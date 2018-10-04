@@ -1,6 +1,6 @@
 
 import java.util.ArrayList;
-import javax.swing.AbstractListModel;
+import javax.swing.table.AbstractTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -12,23 +12,34 @@ import javax.swing.AbstractListModel;
  *
  * @author David
  */
-public class VelocityTableModel extends AbstractListModel<Measurement>{
+public class VelocityTableModel extends AbstractTableModel{
     
     private ArrayList<Measurement> measurments=new ArrayList<>();
-    
-        public void add(Measurement m) {
-        measurments.add(m);
-        fireIntervalAdded(this, measurments.size() - 1, measurments.size() - 1);
-    }
+    private static String[]colNames=
+    {"Datum","Uhrzeit","Kennzeichen","Gemessen","Erlaubt","Übertretung"};
+
         
+
+    
     @Override
-    public int getSize() {
+    public String getColumnName(int column) {
+       return colNames[column];
+    }
+
+    @Override
+    public int getRowCount() {
         return measurments.size();
     }
 
     @Override
-    public Measurement getElementAt(int index) {
-      return measurments.get(index);
+    public int getColumnCount() {
+        return colNames.length;
+    }
+
+    @Override
+    public Object getValueAt(int rowIndex, int columnIndex) {
+        Measurement m=measurments.get(rowIndex);
+       return m;
     }
     
 }
