@@ -24,7 +24,7 @@ public class VelocityDlg extends javax.swing.JDialog {
      * Creates new form VelocityDlg
      */
     private boolean ok;
-    private Measurement measurement;
+    private Measurement m;
     private DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy");
     private DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("HH:mm");
     
@@ -32,6 +32,15 @@ public class VelocityDlg extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
     }
+    public Measurement getMeasurement()
+    {
+        return m;
+    }
+
+    public boolean isOk() {
+        return ok;
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -179,7 +188,7 @@ public class VelocityDlg extends javax.swing.JDialog {
     private void tfÜbernehmenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfÜbernehmenActionPerformed
         int gem = Integer.parseInt(tfgemV.getText());
         int erl = Integer.parseInt(tferlV.getText());
-        Measurement measurement = new Measurement((LocalDate)dtf.parse(tfDatum.getText()), (LocalTime) dtf.parse(tfUhrzeit.getText()),tfKennzeichen.getText(), gem, erl, (gem-erl));
+         m = new Measurement((LocalDate)dtf.parse(tfDatum.getText()), (LocalTime) dtf.parse(tfUhrzeit.getText()),tfKennzeichen.getText(), gem, erl, (gem-erl));
         ok = true;
         this.dispose();
     }//GEN-LAST:event_tfÜbernehmenActionPerformed

@@ -38,6 +38,11 @@ public class VelocityGUI extends javax.swing.JFrame {
         tableMeasurment = new javax.swing.JTable();
 
         MIAdd.setText("jMenuItem1");
+        MIAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MIAddActionPerformed(evt);
+            }
+        });
         jPopupMenu1.add(MIAdd);
 
         MIDelete.setText("jMenuItem2");
@@ -51,6 +56,8 @@ public class VelocityGUI extends javax.swing.JFrame {
         jLabel1.setText("Datei");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Messungen"));
+
+        jScrollPane1.setComponentPopupMenu(jPopupMenu1);
 
         tableMeasurment.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -95,6 +102,17 @@ public class VelocityGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void MIAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIAddActionPerformed
+        VelocityDlg dlg = new VelocityDlg(this, true);
+        dlg.setVisible(true);
+        
+        if( dlg.isOk() ){
+            Measurement m = dlg.getMeasurement();
+            vtm.add(m);
+        }
+        dlg.setVisible(false);
+    }//GEN-LAST:event_MIAddActionPerformed
 
     /**
      * @param args the command line arguments
