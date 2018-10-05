@@ -41,5 +41,9 @@ public class VelocityTableModel extends AbstractTableModel{
         Measurement m=measurments.get(rowIndex);
        return m;
     }
+        public void add(Measurement m){
+        measurments.add(m);
+        fireTableRowsInserted(measurments.size()-1,measurments.size()-1);
+    }
     
 }
