@@ -14,8 +14,12 @@ public class VelocityGUI extends javax.swing.JFrame {
    
     public VelocityGUI() {
         initComponents();
+<<<<<<< HEAD
         tableMeasurment.setModel(vtm);
         
+=======
+        tableMeasurments.setModel(vtm);
+>>>>>>> 15c5718ddd8e2bccb748b906b6679381494a25e5
     }
 
 
