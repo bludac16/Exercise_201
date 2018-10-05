@@ -1,0 +1,111 @@
+commit a89875fa039d7ae413f904fc15e55aeddc115499
+Author: David Blümel <bludac16@htl-kaindorf.ac.at>
+Date:   Fri Oct 5 12:55:16 2018 +0200
+
+    Add
+
+commit e7806d5781d2080295e810b0c9c94f19f537436f
+Author: wimmac <wimmac16@new.edvhtl.at>
+Date:   Fri Oct 5 12:46:46 2018 +0200
+
+    GUI
+
+commit ec40f8883a8a6c8b46ca93caf89dc67b7f6fbe1f
+Merge: 00d4f57 15c5718
+Author: wimmac <wimmac16@new.edvhtl.at>
+Date:   Fri Oct 5 12:35:39 2018 +0200
+
+    corrected TableRenderer
+
+commit 00d4f57cacb293b6e20054a2eb14560d044911c6
+Author: wimmac <wimmac16@new.edvhtl.at>
+Date:   Fri Oct 5 12:33:24 2018 +0200
+
+    corrected TableRenderer
+
+commit 94c0e1950a9cdf9b11d129f3b256979246fc75df
+Merge: 2719bbc e761ff4
+Author: wimmac <wimmac16@new.edvhtl.at>
+Date:   Fri Oct 5 12:24:42 2018 +0200
+
+    Merge branch 'master' into David
+
+commit e761ff4cf7c730e2f5bcf7134d3bcb47e2aff504
+Author: wimmac <wimmac16@new.edvhtl.at>
+Date:   Fri Oct 5 12:21:21 2018 +0200
+
+    modified GUI
+
+commit 15c5718ddd8e2bccb748b906b6679381494a25e5
+Author: David Blümel <bludac16@htl-kaindorf.ac.at>
+Date:   Fri Oct 5 12:13:38 2018 +0200
+
+    test
+
+commit 40307b2d91f2df39919d3968e140ca370d6f1624
+Author: wimmac <wimmac16@new.edvhtl.at>
+Date:   Fri Oct 5 12:06:24 2018 +0200
+
+    finnished TableRenderer
+
+commit 2719bbc832bd13afb10b5b129bf138d1762074ed
+Merge: 029b24c e4a9f39
+Author: David Blümel <bludac16@htl-kaindorf.ac.at>
+Date:   Fri Oct 5 11:56:31 2018 +0200
+
+    class finished: dlg
+
+commit 029b24c3f6b4b53973d46ad1f3808bdcd19ebc13
+Author: David Blümel <bludac16@htl-kaindorf.ac.at>
+Date:   Thu Oct 4 08:53:03 2018 +0200
+
+    Measurement
+
+commit e4a9f39236eeedbdc7e6ebf4d81d9abcd0dd3c5e
+Author: David Blümel <bludac16@htl-kaindorf.ac.at>
+Date:   Thu Oct 4 08:49:30 2018 +0200
+
+    Fixed measurement & started with Dialog
+
+commit acafcdf8f95a81e4d67fac662cc0ba5ae5207c89
+Author: wimmac <wimmac16@new.edvhtl.at>
+Date:   Thu Oct 4 08:45:11 2018 +0200
+
+    corrected TableModel
+
+commit e85c3a511f2f45d4f838915b51d91b0ce782e725
+Merge: 34a0cd8 cb36e28
+Author: David Blümel <bludac16@htl-kaindorf.ac.at>
+Date:   Thu Oct 4 08:20:43 2018 +0200
+
+    Merge branch 'master' of https://github.com/bludac16/Exercise_201
+
+commit 34a0cd89254f1e84dd8100a6033c28531234fd1c
+Author: David Blümel <bludac16@htl-kaindorf.ac.at>
+Date:   Thu Oct 4 08:19:09 2018 +0200
+
+    finished class: Measurement
+
+commit cb36e2819f481be761b5c3d1b19dc5145330e349
+Author: wimmac <wimmac16@new.edvhtl.at>
+Date:   Thu Oct 4 08:17:39 2018 +0200
+
+    implemented Model
+
+commit 4034368619f52aa7af512acc34703aca9920c5f7
+Author: David Blümel <bludac16@htl-kaindorf.ac.at>
+Date:   Tue Oct 2 10:29:43 2018 +0200
+
+    added all classes
+
+commit d4c85c404fdd3214c8771e527d8ac4216aba0c14
+Author: David Blümel <bludac16@htl-kaindorf.ac.at>
+Date:   Tue Oct 2 10:25:15 2018 +0200
+
+    new Project
+
+commit cd3ea01dee26337dbe9fab638fbc1572da4983fc
+Author: bludac16 <43405914+bludac16@users.noreply.github.com>
+Date:   Tue Oct 2 10:21:23 2018 +0200
+
+    Initial commit

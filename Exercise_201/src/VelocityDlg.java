@@ -188,7 +188,7 @@ public class VelocityDlg extends javax.swing.JDialog {
     private void tfÜbernehmenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfÜbernehmenActionPerformed
         int gem = Integer.parseInt(tfgemV.getText());
         int erl = Integer.parseInt(tferlV.getText());
-         m = new Measurement((LocalDate)dtf.parse(tfDatum.getText()), (LocalTime) dtf.parse(tfUhrzeit.getText()),tfKennzeichen.getText(), gem, erl, (gem-erl));
+         m = new Measurement(LocalDate.parse(tfDatum.getText(),dtf), LocalTime.parse(tfUhrzeit.getText(),dtf2),tfKennzeichen.getText(), gem, erl, (gem-erl));
         ok = true;
         this.dispose();
     }//GEN-LAST:event_tfÜbernehmenActionPerformed

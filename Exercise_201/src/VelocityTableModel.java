@@ -45,5 +45,8 @@ public class VelocityTableModel extends AbstractTableModel{
         measurments.add(m);
         fireTableRowsInserted(measurments.size()-1,measurments.size()-1);
     }
-    
+            public void delete(Measurement m){
+        measurments.remove(m);
+                fireTableRowsDeleted(this.getRowCount(), this.getRowCount());
+    }
 }
