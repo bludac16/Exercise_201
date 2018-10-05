@@ -8,15 +8,6 @@ import javax.swing.ListCellRenderer;
 
 public class VelocityTableRenderer implements ListCellRenderer {
 
-    /**
-     *
-     * @param list
-     * @param o
-     * @param i
-     * @param isSelected
-     * @param cellHasFocus
-     * @return
-     */
     @Override
     public Component getListCellRendererComponent(JList list, Object o, int i, boolean isSelected, boolean cellHasFocus) {
         
@@ -41,11 +32,14 @@ public class VelocityTableRenderer implements ListCellRenderer {
           case 1: label.setText(m.getTime().toString());break;
           case 2: label.setText(m.getPlate());break;
           case 3: label.setText(String.format("%d", m.getMeasuredSpeed()));break;
-          case 4: label.setText(String.format("%d", m.getMaxSpeed()));
-          case 4: label.setText(String.format("%d",m.getLawMisdemeanour()));
+          case 4: label.setText(String.format("%d", m.getMaxSpeed()));break;
+          case 5: label.setText(String.format("%d",m.getLawMisdemeanour()));break;
       }
       
+      
+    }
       return label;
     }
-
+    }
+    
 

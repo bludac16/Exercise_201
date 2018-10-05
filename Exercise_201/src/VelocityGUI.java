@@ -23,29 +23,36 @@ public class VelocityGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPopupMenu1 = new javax.swing.JPopupMenu();
+        popupOptionen = new javax.swing.JPopupMenu();
         MIAdd = new javax.swing.JMenuItem();
         MIDelete = new javax.swing.JMenuItem();
         MIAVG = new javax.swing.JMenuItem();
-        jLabel1 = new javax.swing.JLabel();
+        lbDatei = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableMeasurment = new javax.swing.JTable();
 
-        MIAdd.setText("jMenuItem1");
-        jPopupMenu1.add(MIAdd);
+        MIAdd.setText("Hinzufügen");
+        MIAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MIAddActionPerformed(evt);
+            }
+        });
+        popupOptionen.add(MIAdd);
 
-        MIDelete.setText("jMenuItem2");
-        jPopupMenu1.add(MIDelete);
+        MIDelete.setText("Löschen");
+        popupOptionen.add(MIDelete);
 
-        MIAVG.setText("jMenuItem3");
-        jPopupMenu1.add(MIAVG);
+        MIAVG.setText("Durchschnitt");
+        popupOptionen.add(MIAVG);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Datei");
+        lbDatei.setText("Datei");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Messungen"));
+
+        jScrollPane1.setComponentPopupMenu(popupOptionen);
 
         tableMeasurment.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -58,6 +65,7 @@ public class VelocityGUI extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tableMeasurment.setComponentPopupMenu(popupOptionen);
         jScrollPane1.setViewportView(tableMeasurment);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -76,20 +84,30 @@ public class VelocityGUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbDatei, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 7, Short.MAX_VALUE))
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbDatei, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void MIAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MIAddActionPerformed
+        VelocityDlg dlg = new VelocityDlg(this, true);
+        dlg.setVisible(true);
+        
+        if( dlg.isOk() ){
+            Measurement m = dlg.getMeasurement();
+            
+        }
+    }//GEN-LAST:event_MIAddActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,10 +148,10 @@ public class VelocityGUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem MIAVG;
     private javax.swing.JMenuItem MIAdd;
     private javax.swing.JMenuItem MIDelete;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbDatei;
+    private javax.swing.JPopupMenu popupOptionen;
     private javax.swing.JTable tableMeasurment;
     // End of variables declaration//GEN-END:variables
 }
