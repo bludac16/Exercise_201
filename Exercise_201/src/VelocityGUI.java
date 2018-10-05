@@ -1,3 +1,7 @@
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -14,12 +18,9 @@ public class VelocityGUI extends javax.swing.JFrame {
    
     public VelocityGUI() {
         initComponents();
-<<<<<<< HEAD
         tableMeasurment.setModel(vtm);
-        
-=======
-        tableMeasurments.setModel(vtm);
->>>>>>> 15c5718ddd8e2bccb748b906b6679381494a25e5
+        tableMeasurment.setDefaultRenderer(Object.class, new VelocityTableRenderer());
+        vtm.add(new Measurement( LocalDate.of(2002,6,22),LocalTime.of(10,10),"G 123",50,30,20));
     }
 
 

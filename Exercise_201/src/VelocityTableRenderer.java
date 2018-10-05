@@ -3,26 +3,31 @@ import java.awt.Color;
 import java.awt.Component;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JTable;
 import javax.swing.ListCellRenderer;
+import javax.swing.table.TableCellRenderer;
 
-public class VelocityTableRenderer implements ListCellRenderer {
+public class VelocityTableRenderer implements TableCellRenderer {
+
+
 
     @Override
-    public Component getListCellRendererComponent(JList list, Object o, int i, boolean isSelected, boolean cellHasFocus) {
-
-        Measurement m = (Measurement) o;
+    public Component getTableCellRendererComponent(JTable table, Object o, boolean isSelected, boolean hasFocus, int row, int i) {
+              Measurement m = (Measurement) o;
         JLabel label = new JLabel();
         label.setOpaque(true);
-        if (m.getMeasuredSpeed() <= 10) {
+        if(i==5){
+        if (m.getLawMisdemeanour() <= 10) {
             label.setBackground(Color.BLUE);
-        } else if (m.getMeasuredSpeed() > 10 && m.getMeasuredSpeed() <= 20) {
+        } else if (m.getLawMisdemeanour() > 10 && m.getLawMisdemeanour() <= 20) {
             label.setBackground(Color.YELLOW);
-        } else if (m.getMeasuredSpeed() > 20 && m.getMeasuredSpeed() <= 30) {
+        } else if (m.getLawMisdemeanour() > 20 && m.getLawMisdemeanour() <= 30) {
             label.setBackground(Color.ORANGE);
-        } else if (m.getMeasuredSpeed() > 30) {
-            label.setBackground(Color.RED);
+        } else if (m.getLawMisdemeanour() > 30) {
+            label.setBackground(Color.RED);}
+        
 
-            label.setForeground(Color.white);
+        }
 
             switch (i) {
                 case 0:
@@ -46,8 +51,7 @@ public class VelocityTableRenderer implements ListCellRenderer {
             }
 
            
-        } 
-        return label;
-        
+         
+        return label;  
     }
 }
