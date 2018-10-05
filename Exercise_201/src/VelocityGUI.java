@@ -23,10 +23,23 @@ public class VelocityGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        MIAdd = new javax.swing.JMenuItem();
+        MIDelete = new javax.swing.JMenuItem();
+        MIAVG = new javax.swing.JMenuItem();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableMeasurment = new javax.swing.JTable();
+
+        MIAdd.setText("jMenuItem1");
+        jPopupMenu1.add(MIAdd);
+
+        MIDelete.setText("jMenuItem2");
+        jPopupMenu1.add(MIDelete);
+
+        MIAVG.setText("jMenuItem3");
+        jPopupMenu1.add(MIAVG);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -114,8 +127,12 @@ public class VelocityGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem MIAVG;
+    private javax.swing.JMenuItem MIAdd;
+    private javax.swing.JMenuItem MIDelete;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tableMeasurment;
     // End of variables declaration//GEN-END:variables
